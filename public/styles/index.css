@@ -6,8 +6,24 @@
 
     box-sizing: border-box;
 }
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/Inter/Inter-Regular.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/Inter/Inter-Bold.woff2') format('woff2');
+  font-display: swap;
+}
 
 body {
+    font-family: 'Inter', sans-serif;
     background-color: var(--dark-primary);
 }
 
