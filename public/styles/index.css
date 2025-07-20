@@ -6,6 +6,10 @@
 
     box-sizing: border-box;
 }
+
+html {
+    box-sizing: border-box;
+}
 @font-face {
   font-family: 'Inter';
   font-style: normal;
@@ -22,9 +26,71 @@
   font-display: swap;
 }
 
+nav {
+    color:var(--dark-secondary);
+    font-weight: bold;
+    border: 1px solid hsl(204, 50%, 20%)
+}
+nav > ul > li > h1 {
+    font-size: 32px;
+}
+nav > ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navBox {
+    border: 2px solid var(--dark-accent);
+    padding: 0 4rem;
+
+}
+
+.navDroite {
+    display: flex;
+}
+
+.navDroite {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+    padding: 0 10px;
+}
+
+.navDroite > button {
+    padding:10px 60px;
+    background-color: var(--dark-accent);
+    border: 2px solid var(--dark-tertiary);
+}
+
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--dark-primary);
+    display: flex;
+    flex-flow: column nowrap;
+    gap:1rem;
+    padding: 10px;
+}
+
+main {
+    border:1px solid hsl(204, 50%, 20%);
+    padding: 30px 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+main #cardPanel {
+    grid-column: 1/4;
+    display: grid;
+    justify-items: center;
+    align-content: start;
+    gap:1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+main #cartPanel {
+    grid-column: -1/-2;
 }
 
 header {
