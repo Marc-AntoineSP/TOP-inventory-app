@@ -1,0 +1,111 @@
+:root {
+    --dark-primary: hsl(204, 50%, 10%);
+    --dark-secondary: hsl(204, 50%, 90%);
+    --dark-tertiary: hsl(264, 80%, 80%);
+    --dark-accent: hsl(144, 80%, 60%);
+
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--dark-primary);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-flow: row;
+}
+
+/* MANAGECOMPONENT */
+
+.manageComponent {
+    display: flex;
+    flex-flow: row wrap;
+    gap:10px;
+    width:100%;
+    font-weight: bold;
+}
+
+.manageComponentCount {
+    display: inline-flex;
+    width:auto;
+    color:var(--dark-secondary);
+}
+
+.manageComponentFlexContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex:1;
+}
+
+.orderingList {
+    display: flex;
+    flex:1;
+    gap:10px;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+/* BUTTONLISTCOMPONENT */
+
+.buttonListComponent {
+    background-color: var(--dark-tertiary);
+    border:2px solid var(--dark-accent);
+    color:var(--dark-primary);
+    font-weight: bold;
+    display: flex;
+    flex-flow: row nowrap;
+    gap:10px;
+    justify-content: start;
+    align-items: center;
+}
+
+/* CARDCOMPONENT */
+
+.cardComponent {
+    padding:10px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width:300px;
+    height:300px;
+    border:4px solid hsla(144, 80%, 60%, 75%)
+}
+
+.cardComponent hr {
+  border: none;
+  height: 2px;
+  background-color: hsla(144, 80%, 60%, 75%);
+  width: 100%;
+}
+
+/* HEADERCOMPONENT */
+
+.headerComponent {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    flex:1;
+    width:100%;
+    color:var(--dark-secondary);
+    font-weight: bold;
+}
+
+.headerComponent > img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    height:auto;
+}
+
+.headerComponent > p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex:1;
+}
