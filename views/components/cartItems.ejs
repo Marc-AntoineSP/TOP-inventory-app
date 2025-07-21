@@ -1,7 +1,11 @@
-<article>
+<article class="cartItem">
     <%- include('./headerComponent.ejs', {componentName: "Composant"}) %>
-    <div>
-        <p>Quantity : <%=quantity%></p>
-        <p><%=price%>€</p>
+    <div class="quantityPrice">
+        <div class="pCenter">
+            <p>Quantity : <%=quantity%></p>
+        </div>
+        <div class="pCenter">
+            <p><%=price%>€</p>
+        </div>
     </div>
 </article>
