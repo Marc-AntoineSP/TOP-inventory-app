@@ -1,4 +1,6 @@
-<button class="buttonListComponent">
-    <img src="/assets/IcBaselinePlus.svg" alt="plus" srcset="">
-    <span>Order : <%=count%></span>
-</button>
+<form action="/order/<%=id%>/<%=count%>" method="post">
+    <button class="buttonListComponent">
+        <img src="/assets/IcBaselinePlus.svg" alt="plus" srcset="">
+        <span>Order : <%=count%></span>
+    </button>
+</form>

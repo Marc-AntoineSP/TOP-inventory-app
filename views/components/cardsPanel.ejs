@@ -1,5 +1,5 @@
 <div id="cardPanel">
-    <% items.forEach(item => {%>
-        <%- include('cardComponent', {component_name: item.component_name, quantity: item.quantity}) %>
+    <% inventory.items.forEach(item => {%>
+        <%- include('cardComponent', {component_name: item.component_name, quantity: item.quantity, img: item.img, id: item.id}) %>
     <%})%>
 </div>
