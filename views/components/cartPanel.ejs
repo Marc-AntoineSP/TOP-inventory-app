@@ -1,0 +1,6 @@
+<aside>
+    <header>PANIER</header>
+    <% for(let i = 0; i < 5; i++){ %>
+        <%- include('./cartItems.ejs', {quantity:10*i, price:100*i}) %>
+    <%}%>
+</aside>
