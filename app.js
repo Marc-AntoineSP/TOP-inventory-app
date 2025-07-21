@@ -1,3 +1,4 @@
+const order_db = require('./db/orderQuery');
 const express = require('express');
 const indexRouter = require('./routes/indexRouter');
 
@@ -10,4 +11,14 @@ app.set('views', './views');
 app.use('/', indexRouter);
 
 const port = 3000;
-app.listen(port, () => console.log(`Listening on port ${port}!`))
+const server = app.listen(port, () => console.log(`Listening on port ${port}!`));
+
+const graceFulShutdown = async () => {
+    server.close(async () => {
+        console.log('SIG...')
+        await order_db.clearTable();
+        process.exit(0)});
+    setTimeout(async () => {await order_db.clearTable(); process.exit(1)}, 2000 )
+}
+process.on('SIGINT', graceFulShutdown);
+process.on('SIGTERM', graceFulShutdown);

@@ -24,4 +24,15 @@ const getComponentFromInventory = async (req, res, next) => {
     res.status(300).redirect('/')
 }
 
-module.exports = {renderMW, getInventory, getOrderFromButton, getComponentFromInventory};
+const getDataFromOrder = async (req, res, next) => {
+    res.locals.order = res.locals.order || {};
+    const orderComponents = await order_db.getOrder();
+    console.log(orderComponents, 'OrderComponent');
+    res.locals.order.items = orderComponents;
+    if((res.locals.order.items).length !== 0)
+        res.locals.order.totalPrice = orderComponents.reduce((acc, curr) => acc + curr.price * curr.order_quantity, 0);
+    console.log(res.locals.order.items, res.locals.order.totalPrice);
+    next();
+}
+
+module.exports = {renderMW, getInventory, getOrderFromButton, getComponentFromInventory, getDataFromOrder};

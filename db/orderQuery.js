@@ -12,6 +12,9 @@ const addToOrder = async (component, quantity) => {
         ]
     );
 }
+
 const getOrder = async () => (await pool.query(`SELECT "component_name", "price", "order_quantity", "img" FROM order_db`)).rows;
 
-module.exports = {addToOrder, getOrder};
+const clearTable = async() => (await pool.query(`TRUNCATE TABLE order_db RESTART IDENTITY`));
+
+module.exports = {addToOrder, getOrder, clearTable};

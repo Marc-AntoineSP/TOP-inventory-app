@@ -1,4 +1,11 @@
 <aside class="cartPanel">
     <header>PANIER</header>
-        <%- include('cartItems', {quantity: "fdsf", price: "trdt", component_name: "trsdt", img: "stgg"}) %>
+        <% order.items.forEach(item => { %>
+            <%- include('cartItems', {
+                component_name: item.component_name,
+                img: item.img,
+                quantity: item.order_quantity,
+                price: item.price,
+            }) %>
+        <%}) %>
 </aside>
