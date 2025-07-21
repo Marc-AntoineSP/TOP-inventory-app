@@ -1,11 +1,11 @@
 <nav>
     <ul>
         <li class="navGauche">
-            <%- include("./navBox.ejs", {navBoxType:"Solde", montant:99999.99}) %>
+            <%- include("./navBox.ejs", {navBoxType:"Solde", montant:inventory.solde}) %>
         </li>
         <li><h1>INVENTAIRE</h1></li>
         <li class="navDroite">
-            <%- include("./navBox.ejs", {navBoxType:"Prix total", montant:999.99}) %>
+            <%- include("./navBox.ejs", {navBoxType:"Prix total", montant:inventory.totalPrice}) %>
             <button>Commander</button></li>
     </ul>
 </nav>

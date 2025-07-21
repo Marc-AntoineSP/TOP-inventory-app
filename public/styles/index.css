@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-html {
+*, *::after, *::before{
     box-sizing: border-box;
 }
 
@@ -87,6 +87,10 @@ main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     overflow: auto;
+}
+
+main::-webkit-scrollbar {
+    display:none;
 }
 
 main #cardPanel {
@@ -266,5 +270,6 @@ footer #contact ul {
 footer #contact li {
     display: flex;
     justify-content: start;
-    align-items: center;    
+    align-items: center;   
+    gap:1rem; 
 }

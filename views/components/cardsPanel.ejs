@@ -1,13 +1,5 @@
 <div id="cardPanel">
-    <%- include('./cardComponent.ejs', {componentName:"Composant"}) %>
-    <%- include('./cardComponent.ejs', {componentName:"Composant"}) %>
-    <%- include('./cardComponent.ejs', {componentName:"Composant"}) %>
-    <%- include('./cardComponent.ejs', {componentName:"Composant"}) %>
-    <%- include('./cardComponent.ejs', {componentName:"Composant"}) %>
-    <%- include('./cardComponent.ejs', {componentName:"Composant"}) %>
-    <%- include('./cardComponent.ejs', {componentName:"Composant"}) %>
-    <%- include('./cardComponent.ejs', {componentName:"Composant"}) %>
-    <%- include('./cardComponent.ejs', {componentName:"Composant"}) %>
-    <%- include('./cardComponent.ejs', {componentName:"Composant"}) %>
-    <%- include('./cardComponent.ejs', {componentName:"Composant"}) %>
+    <% items.forEach(item => {%>
+        <%- include('cardComponent', {component_name: item.component_name, quantity: item.quantity}) %>
+    <%})%>
 </div>
