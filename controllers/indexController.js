@@ -17,9 +17,10 @@ const getOrderFromButton = (req, res, next) => {
 
 const getComponentFromInventory = async (req, res, next) => {
     const {id, quantity} = req.params;
-    const component = (await inventory_db.getComponentFromId(id)).rows;
+    const component = (await inventory_db.getComponentFromId(id)).rows[0];
     console.log(component, 'compo');
     console.log(quantity, 'quantity');
+    await order_db.addToOrder(component, quantity);
     res.status(300).redirect('/')
 }
 
