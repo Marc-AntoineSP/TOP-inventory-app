@@ -21,7 +21,7 @@ html, body {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  src: url('/fonts/Inter/Inter-Regular.woff2') format('woff2');
+  src: url('./Inter-Regular.woff2') format('woff2');
   font-display: swap;
 }
 
@@ -29,7 +29,7 @@ html, body {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
-  src: url('/fonts/Inter/Inter-Bold.woff2') format('woff2');
+  src: url('./Inter-Bold.woff2') format('woff2');
   font-display: swap;
 }
 
@@ -51,6 +51,11 @@ nav > ul {
     border: 2px solid var(--dark-accent);
     padding: 0 4rem;
 
+}
+.navBox > p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .navDroite {
